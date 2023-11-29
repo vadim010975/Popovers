@@ -2,7 +2,7 @@
  * @jest-environment jsdom
  */
 
-import Popover from "../popover";
+import Popover from "../Popover";
 
 test("testing Popover widget", () => {
   document.documentElement.innerHTML = `
@@ -24,5 +24,5 @@ test("testing Popover widget", () => {
   popover.setContent(" Произошло нажатие на красную кнопку!");
   popover.render(element, "Внимание!");
   const result = document.querySelector(".popover").className;
-  expect(result).toEqual("popover");
+  expect(result).toBe("popover");
 });
